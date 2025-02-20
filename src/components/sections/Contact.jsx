@@ -28,14 +28,14 @@ export const Contact = () => {
   return (
     <section
       id="contact"
-      className="min-h-screen flex items-center justify-center py-20"
+      className="min-h-screen flex items-center justify-center py-20 px-4"
     >
       <RevealOnScroll>
-        <div className="px-4 w-150">
+        <div className="w-full max-w-xl">
           <h2 className="text-3xl font-bold mb-8 bg-gradient-to-r from-blue-500 to-cyan-400 bg-clip-text text-transparent text-center">
             You can Find me Here.
           </h2>
-          <div className="flex justify-center space-x-8 mb-6">
+          <div className="flex justify-center space-x-6 mb-6">
             <a href="https://github.com/RaY8118" target="_blank">
               <img
                 src="https://skillicons.dev/icons?i=github&theme=dark"
@@ -69,8 +69,11 @@ export const Contact = () => {
           <h2 className="text-3xl font-bold mb-8 bg-gradient-to-r from-blue-500 to-cyan-400 bg-clip-text text-transparent text-center">
             Send me a Message
           </h2>
-          <form className="space-y-6" onSubmit={handleSubmit}>
-            <div className="relative space-y-6">
+          <form
+            className="space-y-4 sm:space-y-6 max-w-lg mx-auto"
+            onSubmit={handleSubmit}
+          >
+            <div className="relative space-y-4 sm:space-y-6">
               <input
                 type="text"
                 id="name"
