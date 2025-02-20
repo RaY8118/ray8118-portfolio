@@ -11,8 +11,10 @@ export const Home = () => {
           <h1 className="text-5xl md:text-7xl font-bold mb-6 bg-gradient-to-r from-blue-500 to-cyan-400 bg-clip-text text-transparent leading-right">
             Hi, I'm Parth Ghadi
           </h1>
-          <p className="text-gray-400 text-lg mb-8 max-w-lg mx-auto">
-            Description (add here)
+          <p className="text-gray-400 text-xl mb-8 max-w-lg mx-auto">
+            <strong> Full-stack developer</strong> passionate about backend
+            development, machine learing, and generative AI applications,
+            exploring the power of LLMs.
           </p>
           <div className="flex justify-center space-x-4">
             <a

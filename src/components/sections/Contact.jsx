@@ -8,21 +8,22 @@ export const Contact = () => {
     email: "",
     message: "",
   });
-  const handleSubmit = (e) => {
+  const handleSubmit = async (e) => {
     e.preventDefault();
-    console.log(formData);
-    emailjs
-      .sendForm(
+
+    try {
+      await emailjs.sendForm(
         import.meta.env.VITE_SERVICE_ID,
         import.meta.env.VITE_TEMPLATE_ID,
         e.target,
         import.meta.env.VITE_PUBLIC_KEY,
-      )
-      .then((result) => {
-        alert("Message Sent");
-        setFormData({ name: "", email: "", message: "" });
-      })
-      .catch(() => alert("Oops! Something went wrong. Please try again."));
+      );
+      alert("Message sent!!");
+      setFormData({ name: "", email: "", message: "" });
+    } catch (error) {
+      console.error("Error sending email:", error);
+      alert("Oops! Something went wrong. Please try again.");
+    }
   };
   return (
     <section
@@ -32,7 +33,41 @@ export const Contact = () => {
       <RevealOnScroll>
         <div className="px-4 w-150">
           <h2 className="text-3xl font-bold mb-8 bg-gradient-to-r from-blue-500 to-cyan-400 bg-clip-text text-transparent text-center">
-            Get In Touch
+            You can Find me Here.
+          </h2>
+          <div className="flex justify-center space-x-8 mb-6">
+            <a href="https://github.com/RaY8118" target="_blank">
+              <img
+                src="https://skillicons.dev/icons?i=github&theme=dark"
+                alt="Github"
+                className="w-12 h-12"
+              />
+            </a>
+
+            <a
+              href="https://linkedin.com/in/parth-ghadi-327219247/"
+              target="_blank"
+            >
+              <img
+                src="https://skillicons.dev/icons?i=linkedin&theme=dark"
+                alt="Linkedin"
+                className="w-12 h-12"
+              />
+            </a>
+
+            <a
+              href="https://www.instagram.com/parthghadi._._112"
+              target="_blank"
+            >
+              <img
+                src="https://skillicons.dev/icons?i=instagram&theme=dark"
+                alt="Instagram"
+                className="w-12 h-12"
+              />
+            </a>
+          </div>
+          <h2 className="text-3xl font-bold mb-8 bg-gradient-to-r from-blue-500 to-cyan-400 bg-clip-text text-transparent text-center">
+            Send me a Message
           </h2>
           <form className="space-y-6" onSubmit={handleSubmit}>
             <div className="relative space-y-6">
