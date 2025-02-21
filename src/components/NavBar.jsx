@@ -12,12 +12,14 @@ export const NavBar = ({ menuOpen, SetMenuOpen }) => {
             {" "}
             RaY8118{" "}
           </a>
-          <div
-            className="w-7 h-5 relative cursor-pointer z-40 md:hidden"
-            onClick={() => SetMenuOpen((prev) => !prev)}
-          >
-            &#9776;
-          </div>
+          {!menuOpen && (
+            <div
+              className="w-8 h-8 flex items-center justify-center relative cursor-pointer z-50 md:hidden"
+              onClick={() => SetMenuOpen(true)}
+            >
+              &#9776;
+            </div>
+          )}
           <div className="hidden md:flex items-center space-x-8">
             <a
               href="#home"
