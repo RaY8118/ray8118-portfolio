@@ -8,6 +8,7 @@ import { About } from "./components/sections/About";
 import { Projects } from "./components/sections/Projects";
 import { Contact } from "./components/sections/Contact";
 import { useState } from "react";
+import { ToastContainer } from "react-toastify"
 function App() {
   const [isLoaded, setIsLoaded] = useState(false);
   const [menuOpen, SetMenuOpen] = useState(false);
@@ -23,6 +24,7 @@ function App() {
         <About />
         <Projects />
         <Contact />
+        <ToastContainer position="top-center" />
       </div>
     </>
   );
