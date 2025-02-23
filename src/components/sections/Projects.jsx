@@ -27,7 +27,8 @@ export const Projects = () => {
       "title": "LUMI - Alzheimer's and Elderly Care App",
       "description": "LUMI is a comprehensive solution designed to asssit Alzheimer's an elderly patients by providing essential support through technology. Built with React Native (Expo) for the frontend and Flask for the backend, the app offers features such as task management, face and object detection, and real-time location tracking. It leverages MongoDB for data storage and integrates advanced capabilities to enhance caregiving, ensuring safety and assistance for users facing memory challenges.",
       "tech": ["python", "flask", "mongodb", "reactnative", "nativewindcss", "machine learning",],
-      "codeLink": "https://github.com/RaY8118/LUMI-Backend",
+      "backendLink": "https://github.com/RaY8118/LUMI-Backend",
+      "frontentLink": "https://github.com/RaY8118/LUMI-Mobile-App",
     }
 
   ]
@@ -43,8 +44,6 @@ export const Projects = () => {
             Featured Projects
           </h2>
           <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-
-
             {projects.map((option, index) => (
               <React.Fragment key={index}>
                 <div className="bg-blue-700/5 p-6 rounded-xl border border-white/10 hover:-translate-y-1 hover:border-blue-500/30 hover:shadow-[0_2px_8px_rgba(59,130,246,0.3)] transition-all">
@@ -64,26 +63,47 @@ export const Projects = () => {
                       ),
                     )}
                   </div>
-
                   <div className="flex justify-between items-center">
-                    <a
-                      href={option.codeLink}
-                      className="text-blue-400 hover:text-gray-300 transition-colors my-4"
-                      target="_blank"
-                    >
-                      View Project
-                    </a>
-                    {option.liveProj && (
-                      <div className="flex justify-between items-center">
-                        <a
-                          href={option.codeLink}
+                    {
+                      option.codeLink && (
+                        <a href={option.codeLink}
                           className="text-blue-400 hover:text-gray-300 transition-colors my-4"
                           target="_blank"
-                        >
+                          rel="noopener noreferrer">
+                          View Project
+                        </a>
+                      )
+                    }
+                    {
+                      option.liveProj && (
+                        <a href={option.liveProj}
+                          className="text-blue-400 hover:text-gray-300 transition-colors my-4"
+                          target="_blank"
+                          rel="noopener noreferrer">
                           View Live Project
                         </a>
-                      </div>
-                    )}
+                      )
+                    }
+                    {
+                      option.frontentLink && option.backendLink && (
+                        <>
+                          <a href={option.frontentLink}
+                            className="text-blue-400 hover:text-gray-300 transition-colors my-4"
+                            target="_blank"
+                            rel="noopener noreferrer">
+                            View Project (Frontend)
+                          </a>
+
+                          <a href={option.backendLink}
+                            className="text-blue-400 hover:text-gray-300 transition-colors my-4"
+                            target="_blank"
+                            rel="noopener noreferrer">
+                            View Project (Backend)
+                          </a>
+
+                        </>
+                      )
+                    }
                   </div>
                 </div>
               </React.Fragment>

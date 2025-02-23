@@ -1,6 +1,24 @@
-import { useEffect } from "react";
+import React, { useEffect } from "react";
 
 export const NavBar = ({ menuOpen, SetMenuOpen }) => {
+  const navBarTitles = [
+    {
+      "name": "Home",
+      "link": "#home"
+    },
+    {
+      "name": "About",
+      "link": "#about"
+    },
+    {
+      "name": "Projects",
+      "link": "#projects"
+    },
+    {
+      "name": "Contact",
+      "link": "#contact"
+    }
+  ]
   useEffect(() => {
     document.body.style.overflow = menuOpen ? "hidden" : "";
   }, [menuOpen]);
@@ -21,30 +39,18 @@ export const NavBar = ({ menuOpen, SetMenuOpen }) => {
             </div>
           )}
           <div className="hidden md:flex items-center space-x-8">
-            <a
-              href="#home"
-              className="text-gray-300 hover:text-white transistion-colors"
-            >
-              Home
-            </a>
-            <a
-              href="#about"
-              className="text-gray-300 hover:text-white transistion-colors"
-            >
-              About
-            </a>
-            <a
-              href="#projects"
-              className="text-gray-300 hover:text-white transistion-colors"
-            >
-              Projects
-            </a>
-            <a
-              href="#contact"
-              className="text-gray-300 hover:text-white transistion-colors"
-            >
-              Contact
-            </a>
+            {
+              navBarTitles.map((option, key) => (
+                <React.Fragment key={key}>
+                  <a
+                    href={option.link}
+                    className="text-gray-300 hover:text-white transistion-colors"
+                  >
+                    {option.name}
+                  </a>
+                </React.Fragment>
+              ))
+            }
           </div>
         </div>
       </div>
