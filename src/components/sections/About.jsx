@@ -5,6 +5,7 @@ export const About = () => {
     "HTML",
     "CSS",
     "JavaScript",
+    "TypeScript",
     "React",
     "React Native",
     "Tailwind CSS",
@@ -15,9 +16,10 @@ export const About = () => {
     "Flask",
     "FastAPI",
     "Express",
+    "Java",
     "Docker",
   ];
-  const dbSkills = ["MySQL", "MongoDB", "PostgreSQL", "Firebase"];
+  const dbSkills = ["MySQL", "MongoDB", "PostgreSQL", "SQLite", "Firebase"];
 
   const techColors = {
     HTML: "#E34F26",
@@ -36,8 +38,10 @@ export const About = () => {
     MongoDB: "#47A248",
     PostgreSQL: "#336791",
     Firebase: "#FFCA28",
+    Java: "#007396",
+    TypeScript: "#3178C6",
+    SQLite: "#003B57",
   };
-
   return (
     <section
       id="about"
@@ -51,21 +55,20 @@ export const About = () => {
 
           <div className="bg-white/5 rounded-xl p-8 border-white/10 border hover:-translate-y-1 transition-all hover:border-blue-500/30 hover:shadow-[0_2px_8px_rgba(59,130,246,0.3)]">
             <p className="text-gray-300 mb-6">
-              👨‍💻 I'm a full-stack developer with a strong passion for backend development 🔧 and a growing interest in machine learning 🤖. Currently, I'm pursuing my B.Tech and continuously learning through hands-on projects.
+              👨‍💻 I'm a full-stack developer with a strong passion for backend development 🔧 and a growing interest in machine learning 🤖. I recently completed my B.Tech and continue to learn through hands-on projects.
             </p>
             <p className="text-gray-300 mb-6">
-              🌱 <strong>Currently Learning:</strong> React Native (Expo) for mobile app development, advanced Python for backend systems, and MongoDB for data persistence.
+              🌱 <strong>Currently Learning:</strong> Java for Data Structures and Algorithms (DSA) and backend development, FastAPI in Python, and a bit of TypeScript with PostgreSQL.
             </p>
             <p className="text-gray-300 mb-6">
               🧠 <strong>Areas of Interest:</strong> Backend architecture, generative AI, and applying large language models (LLMs) to solve real-world problems.
             </p>
             <p className="text-gray-300 mb-6">
-              ❓ <strong>Ask Me About:</strong> Python, backend development workflows, and the occasional JavaScript gotcha.
+              ❓ <strong>Ask Me About:</strong> Python, backend development workflows, and the occasional JavaScript quirks.
             </p>
             <p className="text-gray-300 mb-6">
-              ⚡ <strong>Fun Fact:</strong> I work in Neovim with an anime-themed setup. Yes, it boosts productivity 😎.
+              ⚡ <strong>Fun Fact:</strong> I work in Neovim with an anime-themed setup – it boosts my productivity 😎.
             </p>
-
             <div className="grid grid-cols-1 md:grid-cols-3 gap-6 mt-6">
               <div className="rounded-xl p-6 hover:-translate-y-1 transition-all">
                 <h3 className="text-xl font-bold mb-4">Frontend</h3>
@@ -75,7 +78,7 @@ export const About = () => {
                       key={key}
                       style={{
                         backgroundColor: techColors[tech] || "rgba(59,130,246,0.2)",
-                        color: tech === "JavaScript" || tech === "Firebase" ? "#000" : "#fff",
+                        color: tech === "JavaScript" || tech === "Firebase" || tech === "React" ? "#000" : "#fff",
                       }}
                       className="py-1 px-3 rounded-full text-sm transition-all hover:opacity-80"
                     >
@@ -131,7 +134,7 @@ export const About = () => {
                   <strong>B.Tech in Electronics and Computer Science</strong> – SAKEC (2021–2025)
                 </li>
                 <li>
-                  <strong>Current CGPA:</strong> 9.02
+                  <strong>Current CGPA:</strong> 9.05
                 </li>
                 <li>
                   <strong>Relevant Coursework:</strong> Data Structures, Web Development, IoT, Cloud Computing, and more.

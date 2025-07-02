@@ -4,6 +4,30 @@ import { RevealOnScroll } from "../RevealOnScroll";
 export const Projects = () => {
   const projects = [
     {
+      title: "LUMI - Alzheimer's and Elderly Care App",
+      description: "React Native + Flask app with reminders, face detection, and live tracking for elderly care.",
+      tech: ["python", "flask", "mongodb", "reactnative", "nativewindcss", "machine learning"],
+      backendLink: "https://github.com/RaY8118/LUMI-Backend",
+      frontentLink: "https://github.com/RaY8118/LUMI-Mobile-App",
+      thumbnail: "https://res.cloudinary.com/dkyzhoqpb/image/upload/v1747924212/portfolio/z8cpb7ac6tyki304blac.png"
+    },
+    {
+      title: "VoteVision",
+      description: "Secure online voting system with face recognition using FastAPI and React.",
+      tech: ["python", "fastapi", "postgres", "react", "typescript", "face recognition"],
+      codeLink: "https://github.com/RaY8118/votevision",
+      liveProj: "https://votevision.onrender.com",
+      thumbnail: "https://res.cloudinary.com/dkyzhoqpb/image/upload/v1747921027/portfolio/xkmktd0m95oqdvcrccuz.png"
+    },
+    {
+      title: "Crypto Portfolio",
+      description: "Track your crypto investments with real-time data, charts, and portfolio management.",
+      tech: ["python", "fastapi", "sqlite", "react", "typescript"],
+      codeLink: "https://github.com/RaY8118/Crypto-Portfolio",
+      liveProj: "https://crypto-portfolio-69v.pages.dev",
+      thumbnail: "https://res.cloudinary.com/dkyzhoqpb/image/upload/v1751467238/crypto_jydeoe.png"
+    },
+    {
       title: "Attendance System using Face Recognition",
       description: "Flask-based attendance system with multi-camera face recognition and role-based access.",
       tech: ["python", "flask", "mysql", "machine learning"],
@@ -26,22 +50,6 @@ export const Projects = () => {
       liveProj: "https://smart-home-control-v3.netlify.app",
       thumbnail: "https://res.cloudinary.com/dkyzhoqpb/image/upload/v1747921027/portfolio/wnwindgrxi1wcgulemub.png"
     },
-    {
-      title: "LUMI - Alzheimer's and Elderly Care App",
-      description: "React Native + Flask app with reminders, face detection, and live tracking for elderly care.",
-      tech: ["python", "flask", "mongodb", "reactnative", "nativewindcss", "machine learning"],
-      backendLink: "https://github.com/RaY8118/LUMI-Backend",
-      frontentLink: "https://github.com/RaY8118/LUMI-Mobile-App",
-      thumbnail: "https://res.cloudinary.com/dkyzhoqpb/image/upload/v1747924212/portfolio/z8cpb7ac6tyki304blac.png"
-    },
-    {
-      title: "VoteVision",
-      description: "Secure online voting system with face recognition using FastAPI and React.",
-      tech: ["python", "fastapi", "postgres", "react", "typescript", "face recognition"],
-      codeLink: "https://github.com/RaY8118/votevision",
-      liveProj: "https://votevision.onrender.com",
-      thumbnail: "https://res.cloudinary.com/dkyzhoqpb/image/upload/v1747921027/portfolio/xkmktd0m95oqdvcrccuz.png"
-    }
   ];
 
   return (
