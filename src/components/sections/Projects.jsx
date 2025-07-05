@@ -9,7 +9,7 @@ export const Projects = () => {
       tech: ["python", "flask", "mongodb", "reactnative", "nativewindcss", "machine learning"],
       backendLink: "https://github.com/RaY8118/LUMI-Backend",
       frontentLink: "https://github.com/RaY8118/LUMI-Mobile-App",
-      thumbnail: "https://res.cloudinary.com/dkyzhoqpb/image/upload/v1747924212/portfolio/z8cpb7ac6tyki304blac.png"
+      thumbnail: "https://res.cloudinary.com/dkyzhoqpb/image/upload/w_400,h_300,c_pad,b_auto,q_auto,f_auto/v1747924212/portfolio/z8cpb7ac6tyki304blac.png"
     },
     {
       title: "VoteVision",
@@ -17,7 +17,7 @@ export const Projects = () => {
       tech: ["python", "fastapi", "postgres", "react", "typescript", "face recognition"],
       codeLink: "https://github.com/RaY8118/votevision",
       liveProj: "https://votevision.onrender.com",
-      thumbnail: "https://res.cloudinary.com/dkyzhoqpb/image/upload/v1747921027/portfolio/xkmktd0m95oqdvcrccuz.png"
+      thumbnail: "https://res.cloudinary.com/dkyzhoqpb/image/upload/w_600,q_auto,f_auto/v1747921027/portfolio/xkmktd0m95oqdvcrccuz.png"
     },
     {
       title: "Crypto Portfolio",
@@ -25,14 +25,14 @@ export const Projects = () => {
       tech: ["python", "fastapi", "sqlite", "react", "typescript"],
       codeLink: "https://github.com/RaY8118/Crypto-Portfolio",
       liveProj: "https://crypto-portfolio-69v.pages.dev",
-      thumbnail: "https://res.cloudinary.com/dkyzhoqpb/image/upload/v1751467238/crypto_jydeoe.png"
+      thumbnail: "https://res.cloudinary.com/dkyzhoqpb/image/upload/w_600,q_auto,f_auto/v1751467238/crypto_jydeoe.png"
     },
     {
       title: "Attendance System using Face Recognition",
       description: "Flask-based attendance system with multi-camera face recognition and role-based access.",
       tech: ["python", "flask", "mysql", "machine learning"],
       codeLink: "https://github.com/RaY8118/Flask_Face_Recognition--multiple_Cameras",
-      thumbnail: "https://res.cloudinary.com/dkyzhoqpb/image/upload/v1747922220/portfolio/i6yqvhmemagvbmxkkuud.png"
+      thumbnail: "https://res.cloudinary.com/dkyzhoqpb/image/upload/w_600,q_auto,f_auto/v1747922220/portfolio/i6yqvhmemagvbmxkkuud.png"
     },
     {
       title: "Hospital Management System",
@@ -40,7 +40,7 @@ export const Projects = () => {
       tech: ["react", "nodejs", "express", "full-stack", "mongodb"],
       codeLink: "https://github.com/RaY8118/Hospital_Management_System",
       liveProj: "https://hospital-system-gmkt.onrender.com",
-      thumbnail: "https://res.cloudinary.com/dkyzhoqpb/image/upload/v1747921027/portfolio/uxfdwlpo7xnsa5svylwd.png"
+      thumbnail: "https://res.cloudinary.com/dkyzhoqpb/image/upload/w_600,q_auto,f_auto/v1747921027/portfolio/uxfdwlpo7xnsa5svylwd.png"
     },
     {
       title: "Smart Home Control",
@@ -48,7 +48,7 @@ export const Projects = () => {
       tech: ["react", "esp32", "firebase", "IoT", "pwa-app"],
       codeLink: "https://github.com/RaY8118/SmartHomeControlV3",
       liveProj: "https://smart-home-control-v3.netlify.app",
-      thumbnail: "https://res.cloudinary.com/dkyzhoqpb/image/upload/v1747921027/portfolio/wnwindgrxi1wcgulemub.png"
+      thumbnail: "https://res.cloudinary.com/dkyzhoqpb/image/upload/w_600,q_auto,f_auto/v1747921027/portfolio/wnwindgrxi1wcgulemub.png"
     },
   ];
 
@@ -70,6 +70,7 @@ export const Projects = () => {
                     src={project.thumbnail}
                     alt={`${project.title} thumbnail`}
                     className="rounded-lg mb-4 w-full h-40 object-cover"
+                    loading="lazy"
                   />
                 )}
                 <h3 className="text-xl font-semibold mb-2">{project.title}</h3>
