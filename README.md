@@ -15,12 +15,33 @@ and links to my social profiles.
 ## 🛠️ Tech Stack
 
 - **Frontend:** React + Tailwind CSS
-- **Backend (for Contact Form):** Node.js / Email API
-- **Deployment:** Render
+- **Backend (for Contact Form):** Node.js with Email API integration
+- **Deployment:** CloudFlare Pages
 
 ## 🔧 Setup Instructions
 
-1. Clone the repository:
+1. **Clone the repository:**
+
    ```bash
    git clone https://github.com/RaY8118/ray8118-portfolio.git
    ```
+
+2. **Navigate to the project folder:**
+
+   ```bash
+   cd ray8118-portfolio
+   ```
+
+3. **Install dependencies:**
+
+   ```bash
+   npm install
+   ```
+
+4. **Run the development server:**
+
+   ```bash
+   npm run dev
+   ```
+
+
