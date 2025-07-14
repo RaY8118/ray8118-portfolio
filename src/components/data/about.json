@@ -1,0 +1,84 @@
+{
+  "frontend": [
+    {
+      "name": "HTML",
+      "color": "#E34F26"
+    },
+    {
+      "name": "CSS",
+      "color": "#264DE4"
+    },
+    {
+      "name": "JavaScript",
+      "color": "#F7DF1E"
+    },
+    {
+      "name": "TypeScript",
+      "color": "#3178C6"
+    },
+    {
+      "name": "React",
+      "color": "#61DAFB"
+    },
+    {
+      "name": "React Native",
+      "color": "#61DBFB"
+    },
+    {
+      "name": "Tailwind CSS",
+      "color": "#38BDF8"
+    }
+  ],
+  "backend": [
+    {
+      "name": "Node.js",
+      "color": "#339933"
+    },
+    {
+      "name": "Python",
+      "color": "#3776AB"
+    },
+    {
+      "name": "Flask",
+      "color": "#000000"
+    },
+    {
+      "name": "FastAPI",
+      "color": "#009688"
+    },
+    {
+      "name": "Express",
+      "color": "#303030"
+    },
+    {
+      "name": "Java",
+      "color": "#007396"
+    },
+    {
+      "name": "Docker",
+      "color": "#0db7ed"
+    }
+  ],
+  "database": [
+    {
+      "name": "MySQL",
+      "color": "#00758F"
+    },
+    {
+      "name": "MongoDB",
+      "color": "#47A248"
+    },
+    {
+      "name": "PostgreSQL",
+      "color": "#336791"
+    },
+    {
+      "name": "SQLite",
+      "color": "#003B57"
+    },
+    {
+      "name": "Firebase",
+      "color": "#FFCA28"
+    }
+  ]
+}

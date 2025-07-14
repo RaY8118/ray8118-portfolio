@@ -1,47 +1,7 @@
 import { RevealOnScroll } from "../RevealOnScroll";
+import aboutData from "../data/about.json"
 
 export const About = () => {
-  const frontendSkills = [
-    "HTML",
-    "CSS",
-    "JavaScript",
-    "TypeScript",
-    "React",
-    "React Native",
-    "Tailwind CSS",
-  ];
-  const backendSkills = [
-    "Node.js",
-    "Python",
-    "Flask",
-    "FastAPI",
-    "Express",
-    "Java",
-    "Docker",
-  ];
-  const dbSkills = ["MySQL", "MongoDB", "PostgreSQL", "SQLite", "Firebase"];
-
-  const techColors = {
-    HTML: "#E34F26",
-    CSS: "#264DE4",
-    JavaScript: "#F7DF1E",
-    React: "#61DAFB",
-    "React Native": "#61DBFB",
-    "Tailwind CSS": "#38BDF8",
-    NodeJS: "#339933",
-    Python: "#3776AB",
-    Flask: "#000000",
-    FastAPI: "#009688",
-    Express: "#303030",
-    Docker: "#0db7ed",
-    MySQL: "#00758F",
-    MongoDB: "#47A248",
-    PostgreSQL: "#336791",
-    Firebase: "#FFCA28",
-    Java: "#007396",
-    TypeScript: "#3178C6",
-    SQLite: "#003B57",
-  };
   return (
     <section
       id="about"
@@ -73,16 +33,16 @@ export const About = () => {
               <div className="rounded-xl p-6 hover:-translate-y-1 transition-all">
                 <h3 className="text-xl font-bold mb-4">Frontend</h3>
                 <div className="flex flex-wrap gap-2">
-                  {frontendSkills.map((tech, key) => (
+                  {aboutData.frontend.map((tech, key) => (
                     <span
                       key={key}
                       style={{
-                        backgroundColor: techColors[tech] || "rgba(59,130,246,0.2)",
-                        color: tech === "JavaScript" || tech === "Firebase" || tech === "React" ? "#000" : "#fff",
+                        backgroundColor: tech.color || "rgba(59,130,246,0.2)",
+                        color: ["JavaScript", "Firebase", "React"].includes(tech.name) ? "#000" : "#fff",
                       }}
                       className="py-1 px-3 rounded-full text-sm transition-all hover:opacity-80"
                     >
-                      {tech}
+                      {tech.name}
                     </span>
                   ))}
                 </div>
@@ -91,16 +51,16 @@ export const About = () => {
               <div className="rounded-xl p-6 hover:-translate-y-1 transition-all">
                 <h3 className="text-xl font-bold mb-4">Backend</h3>
                 <div className="flex flex-wrap gap-2">
-                  {backendSkills.map((tech, key) => (
+                  {aboutData.backend.map((tech, key) => (
                     <span
                       key={key}
                       style={{
-                        backgroundColor: techColors[tech] || "rgba(59,130,246,0.2)",
-                        color: tech === "JavaScript" || tech === "Firebase" ? "#000" : "#fff",
+                        backgroundColor: tech.color || "rgba(59,130,246,0.2)",
+                        color: ["JavaScript", "Firebase", "React"].includes(tech.name) ? "#000" : "#fff",
                       }}
                       className="py-1 px-3 rounded-full text-sm transition-all hover:opacity-80"
                     >
-                      {tech}
+                      {tech.name}
                     </span>
                   ))}
                 </div>
@@ -109,16 +69,16 @@ export const About = () => {
               <div className="rounded-xl p-6 hover:-translate-y-1 transition-all">
                 <h3 className="text-xl font-bold mb-4">Database</h3>
                 <div className="flex flex-wrap gap-2">
-                  {dbSkills.map((tech, key) => (
+                  {aboutData.database.map((tech, key) => (
                     <span
                       key={key}
                       style={{
-                        backgroundColor: techColors[tech] || "rgba(59,130,246,0.2)",
-                        color: tech === "JavaScript" || tech === "Firebase" ? "#000" : "#fff",
+                        backgroundColor: tech.color || "rgba(59,130,246,0.2)",
+                        color: ["JavaScript", "Firebase", "React"].includes(tech.name) ? "#000" : "#fff",
                       }}
                       className="py-1 px-3 rounded-full text-sm transition-all hover:opacity-80"
                     >
-                      {tech}
+                      {tech.name}
                     </span>
                   ))}
                 </div>
