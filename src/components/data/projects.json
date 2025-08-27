@@ -16,6 +16,21 @@
       "thumbnail": "https://res.cloudinary.com/dkyzhoqpb/image/upload/w_400,h_300,c_pad,b_auto,q_auto,f_auto/v1747924212/portfolio/z8cpb7ac6tyki304blac.png"
     },
     {
+      "title": "Nekorec: An Anime Recommendation Web App",
+      "description": "NekoRec is a full-stack web application for personalized anime recommendations. It features anime browsing, detailed views, genre exploration, and content-based recommendations.",
+      "tech": [
+        "python",
+        "fastapi",
+        "react",
+        "typescript",
+        "mongodb",
+        "gemini-embeddings"
+      ],
+      "codeLink": "https://github.com/RaY8118/anime-recommendation",
+      "liveProj": "https://nekorec.pages.dev",
+      "thumbnail": "https://res.cloudinary.com/dkyzhoqpb/image/upload/w_600,q_auto,f_auto/v1756307291/anime_kr95oq.png"
+    },
+    {
       "title": "VoteVision",
       "description": "Secure online voting system with face recognition using FastAPI and React.",
       "tech": [
@@ -55,20 +70,6 @@
       ],
       "codeLink": "https://github.com/RaY8118/Flask_Face_Recognition--multiple_Cameras",
       "thumbnail": "https://res.cloudinary.com/dkyzhoqpb/image/upload/w_600,q_auto,f_auto/v1747922220/portfolio/i6yqvhmemagvbmxkkuud.png"
-    },
-    {
-      "title": "Hospital Management System",
-      "description": "MERN stack app for patient appointments, prescriptions, and admin doctor management.",
-      "tech": [
-        "react",
-        "nodejs",
-        "express",
-        "full-stack",
-        "mongodb"
-      ],
-      "codeLink": "https://github.com/RaY8118/Hospital_Management_System",
-      "liveProj": "https://hospital-system-gmkt.onrender.com",
-      "thumbnail": "https://res.cloudinary.com/dkyzhoqpb/image/upload/w_600,q_auto,f_auto/v1747921027/portfolio/uxfdwlpo7xnsa5svylwd.png"
     },
     {
       "title": "Smart Home Control",
