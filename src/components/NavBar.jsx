@@ -23,28 +23,42 @@ export const NavBar = ({ menuOpen, SetMenuOpen }) => {
     document.body.style.overflow = menuOpen ? "hidden" : "";
   }, [menuOpen]);
   return (
-    <nav className="fixed top-0 w-full z-40 bg-[rgba(10,10,10,0.8)] backdrop-blur-lg border-b border-white/10 shadow-lg">
-      <div className="max-w-5xl mx-auto px-4">
+    <nav className="fixed top-0 w-full z-40 bg-gray-900/80 backdrop-blur-md border-b border-gray-700 shadow-lg">
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex justify-between items-center h-16">
-          <a href="#home" className="font-mono text-xl font-bold text-white">
+          <a href="#home" className="font-mono text-2xl font-extrabold text-white hover:text-gray-200 transition-colors duration-300">
             {" "}
             RaY8118{" "}
           </a>
           {!menuOpen && (
-            <div
-              className="w-8 h-8 flex items-center justify-center relative cursor-pointer z-50 md:hidden"
+            <button
+              className="w-8 h-8 flex items-center justify-center relative cursor-pointer z-50 md:hidden text-white focus:outline-none"
               onClick={() => SetMenuOpen(true)}
+              aria-label="Open menu"
             >
-              &#9776;
-            </div>
+              <svg
+                className="w-6 h-6"
+                fill="none"
+                stroke="currentColor"
+                viewBox="0 0 24 24"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <path
+                  strokeLinecap="round"
+                  strokeLinejoin="round"
+                  strokeWidth="2"
+                  d="M4 6h16M4 12h16M4 18h16"
+                ></path>
+              </svg>
+            </button>
           )}
-          <div className="hidden md:flex items-center space-x-8">
+          <div className="hidden md:flex items-center space-x-6">
             {
               navBarTitles.map((option, key) => (
                 <React.Fragment key={key}>
                   <a
                     href={option.link}
-                    className="text-gray-300 hover:text-white transistion-colors"
+                    className="text-gray-300 hover:text-white px-3 py-2 rounded-md text-sm font-medium transition-colors duration-300"
                   >
                     {option.name}
                   </a>

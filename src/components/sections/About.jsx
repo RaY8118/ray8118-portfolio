@@ -9,38 +9,38 @@ export const About = () => {
     >
       <RevealOnScroll>
         <div className="max-w-6xl mx-auto px-4">
-          <h2 className="text-3xl font-bold mb-8 bg-gradient-to-r from-blue-500 to-cyan-400 bg-clip-text text-transparent text-center">
+          <h2 className="text-4xl font-extrabold mb-12 text-center bg-gradient-to-r from-purple-400 to-blue-600 bg-clip-text text-transparent">
             About Me
           </h2>
 
-          <div className="bg-white/5 rounded-xl p-8 border-white/10 border hover:-translate-y-1 transition-all hover:border-blue-500/30 hover:shadow-[0_2px_8px_rgba(59,130,246,0.3)]">
-            <p className="text-gray-300 mb-6">
-              👨‍💻 I'm a full-stack developer with a strong passion for backend development 🔧 and a growing interest in machine learning 🤖. I recently completed my B.Tech and continue to learn through hands-on projects.
+          <div className="bg-gray-800/50 rounded-xl p-8 border border-gray-700 shadow-xl hover:shadow-purple-500/20 transition-all duration-300 transform hover:-translate-y-1">
+            <p className="text-gray-300 text-lg leading-relaxed mb-6">
+              👨‍💻 I'm a passionate Full-Stack Developer with a significant focus on crafting robust and scalable backend systems 🔧. My journey in software development is driven by a desire to build efficient solutions, from intricate API designs to powerful data processing pipelines. I recently completed my B.Tech and am continuously expanding my expertise through hands-on projects and exploring cutting-edge technologies.
             </p>
-            <p className="text-gray-300 mb-6">
-              🌱 <strong>Currently Learning:</strong> Java for Data Structures and Algorithms (DSA) and backend development, FastAPI in Python, and a bit of TypeScript with PostgreSQL.
+            <p className="text-gray-300 text-lg leading-relaxed mb-6">
+              🌱 <strong>Currently Deepening Expertise In:</strong> Advanced Java for Data Structures & Algorithms and enterprise-grade backend development with Spring Boot, continuously improving my Python skills, and actively working with Go, a language I thoroughly enjoy.
             </p>
-            <p className="text-gray-300 mb-6">
-              🧠 <strong>Areas of Interest:</strong> Backend architecture, generative AI, and applying large language models (LLMs) to solve real-world problems.
+            <p className="text-gray-300 text-lg leading-relaxed mb-6">
+              🧠 <strong>Core Interests:</strong> Designing resilient backend architectures, exploring the potential of generative AI, and leveraging Large Language Models (LLMs) to innovate and solve complex real-world challenges.
             </p>
-            <p className="text-gray-300 mb-6">
-              ❓ <strong>Ask Me About:</strong> Python, backend development workflows, and the occasional JavaScript quirks.
+            <p className="text-gray-300 text-lg leading-relaxed mb-6">
+              ❓ <strong>Let's Connect About:</strong> Python, Go, Java (Spring Boot), backend development best practices, API design, system scalability, and the fascinating world of AI/ML applications.
             </p>
-            <p className="text-gray-300 mb-6">
-              ⚡ <strong>Fun Fact:</strong> I work in Neovim with an anime-themed setup – it boosts my productivity 😎.
+            <p className="text-gray-300 text-lg leading-relaxed mb-6">
+              ⚡ <strong>Fun Fact:</strong> My coding environment is a highly customized Neovim setup, often themed with anime aesthetics – a unique blend that fuels my productivity and creativity 😎.
             </p>
-            <div className="grid grid-cols-1 md:grid-cols-3 gap-6 mt-6">
-              <div className="rounded-xl p-6 hover:-translate-y-1 transition-all">
-                <h3 className="text-xl font-bold mb-4">Frontend</h3>
-                <div className="flex flex-wrap gap-2">
+            <div className="grid grid-cols-1 md:grid-cols-3 gap-8 mt-10">
+              <div className="bg-gray-800/50 rounded-xl p-6 border border-gray-700 shadow-md hover:shadow-purple-500/20 transition-all duration-300 transform hover:-translate-y-1">
+                <h3 className="text-2xl font-bold mb-5 text-purple-300">Frontend</h3>
+                <div className="flex flex-wrap gap-3">
                   {aboutData.frontend.map((tech, key) => (
                     <span
                       key={key}
                       style={{
-                        backgroundColor: tech.color || "rgba(59,130,246,0.2)",
-                        color: ["JavaScript", "Firebase", "React"].includes(tech.name) ? "#000" : "#fff",
+                        backgroundColor: tech.color || "#4A5568", // Default gray if no color
+                        color: tech.color && (tech.color === "#F7DF1E" || tech.color === "#61DAFB") ? "#1A202C" : "#FFFFFF", // Darker text for light backgrounds
                       }}
-                      className="py-1 px-3 rounded-full text-sm transition-all hover:opacity-80"
+                      className="py-1.5 px-4 rounded-full text-sm font-medium transition-all hover:scale-105"
                     >
                       {tech.name}
                     </span>
@@ -48,17 +48,17 @@ export const About = () => {
                 </div>
               </div>
 
-              <div className="rounded-xl p-6 hover:-translate-y-1 transition-all">
-                <h3 className="text-xl font-bold mb-4">Backend</h3>
-                <div className="flex flex-wrap gap-2">
+              <div className="bg-gray-800/50 rounded-xl p-6 border border-purple-600 shadow-lg hover:shadow-purple-500/40 transition-all duration-300 transform hover:-translate-y-1">
+                <h3 className="text-2xl font-bold mb-5 text-purple-400">Backend</h3>
+                <div className="flex flex-wrap gap-3">
                   {aboutData.backend.map((tech, key) => (
                     <span
                       key={key}
                       style={{
-                        backgroundColor: tech.color || "rgba(59,130,246,0.2)",
-                        color: ["JavaScript", "Firebase", "React"].includes(tech.name) ? "#000" : "#fff",
+                        backgroundColor: tech.color || "#4A5568",
+                        color: tech.color && (tech.color === "#F7DF1E" || tech.color === "#61DAFB") ? "#1A202C" : "#FFFFFF",
                       }}
-                      className="py-1 px-3 rounded-full text-sm transition-all hover:opacity-80"
+                      className="py-1.5 px-4 rounded-full text-sm font-medium transition-all hover:scale-105"
                     >
                       {tech.name}
                     </span>
@@ -66,17 +66,17 @@ export const About = () => {
                 </div>
               </div>
 
-              <div className="rounded-xl p-6 hover:-translate-y-1 transition-all">
-                <h3 className="text-xl font-bold mb-4">Database</h3>
-                <div className="flex flex-wrap gap-2">
+              <div className="bg-gray-800/50 rounded-xl p-6 border border-gray-700 shadow-md hover:shadow-purple-500/20 transition-all duration-300 transform hover:-translate-y-1">
+                <h3 className="text-2xl font-bold mb-5 text-purple-300">Database</h3>
+                <div className="flex flex-wrap gap-3">
                   {aboutData.database.map((tech, key) => (
                     <span
                       key={key}
                       style={{
-                        backgroundColor: tech.color || "rgba(59,130,246,0.2)",
-                        color: ["JavaScript", "Firebase", "React"].includes(tech.name) ? "#000" : "#fff",
+                        backgroundColor: tech.color || "#4A5568",
+                        color: tech.color && (tech.color === "#F7DF1E" || tech.color === "#61DAFB") ? "#1A202C" : "#FFFFFF",
                       }}
-                      className="py-1 px-3 rounded-full text-sm transition-all hover:opacity-80"
+                      className="py-1.5 px-4 rounded-full text-sm font-medium transition-all hover:scale-105"
                     >
                       {tech.name}
                     </span>
@@ -86,10 +86,10 @@ export const About = () => {
             </div>
           </div>
 
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-6 mt-8">
-            <div className="bg-white/5 p-6 rounded-xl border-white/10 border hover:-translate-y-1 transition-all hover:border-blue-500/30 hover:shadow-[0_2px_8px_rgba(59,130,246,0.3)]">
-              <h3 className="text-xl font-bold mb-4">Education</h3>
-              <ul className="list-disc list-inside text-gray-300 space-y-2">
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-8 mt-10">
+            <div className="bg-gray-800/50 p-6 rounded-xl border border-gray-700 shadow-md hover:shadow-purple-500/20 transition-all duration-300 transform hover:-translate-y-1">
+              <h3 className="text-2xl font-bold mb-5 text-purple-300">Education</h3>
+              <ul className="list-disc list-inside text-gray-300 space-y-3">
                 <li>
                   <strong>B.Tech in Electronics and Computer Science</strong> – SAKEC (2021–2025)
                 </li>
@@ -102,19 +102,19 @@ export const About = () => {
               </ul>
             </div>
 
-            <div className="bg-white/5 p-6 rounded-xl border-white/10 border hover:-translate-y-1 transition-all hover:border-blue-500/30 hover:shadow-[0_2px_8px_rgba(59,130,246,0.3)]">
-              <h3 className="text-xl font-bold mb-4">Internships</h3>
-              <div className="space-y-4 text-gray-300">
+            <div className="bg-gray-800/50 p-6 rounded-xl border border-gray-700 shadow-md hover:shadow-purple-500/20 transition-all duration-300 transform hover:-translate-y-1">
+              <h3 className="text-2xl font-bold mb-5 text-purple-300">Internships</h3>
+              <div className="space-y-5 text-gray-300">
                 <div>
-                  <h4 className="font-semibold">Python Developer Intern – Oasis Infobyte</h4>
-                  <p>
+                  <h4 className="font-semibold text-lg">Python Developer Intern – Oasis Infobyte</h4>
+                  <p className="text-base">
                     Built desktop GUI applications using Tkinter and PyQt5, and integrated REST APIs for dynamic data handling.
                   </p>
                 </div>
 
                 <div>
-                  <h4 className="font-semibold">Full-Stack Developer Intern – SAKEC</h4>
-                  <p>
+                  <h4 className="font-semibold text-lg">Full-Stack Developer Intern – SAKEC</h4>
+                  <p className="text-base">
                     Worked on a hospital management system using the MERN stack. Implemented user authentication, handled CRUD operations, and participated in testing and debugging phases.
                   </p>
                 </div>

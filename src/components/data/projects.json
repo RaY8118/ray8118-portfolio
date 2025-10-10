@@ -45,45 +45,19 @@
       "liveProj": "https://votevision.onrender.com",
       "thumbnail": "https://res.cloudinary.com/dkyzhoqpb/image/upload/w_600,q_auto,f_auto/v1747921027/portfolio/xkmktd0m95oqdvcrccuz.png"
     },
+
+
     {
-      "title": "Crypto Portfolio",
-      "description": "Track your crypto investments with real-time data, charts, and portfolio management.",
+      "title": "HTTP Server from Scratch in Go",
+      "description": "A hands-on exploration into the fundamentals of the HTTP protocol, built from the ground up in Go using only raw TCP sockets, evolving into a mini, net/http-like web library.",
       "tech": [
-        "python",
-        "fastapi",
-        "sqlite",
-        "react",
-        "typescript"
+        "go",
+        "networking",
+        "http",
+        "tcp"
       ],
-      "codeLink": "https://github.com/RaY8118/Crypto-Portfolio",
-      "liveProj": "https://crypto-portfolio-69v.pages.dev",
-      "thumbnail": "https://res.cloudinary.com/dkyzhoqpb/image/upload/w_600,q_auto,f_auto/v1751467238/crypto_jydeoe.png"
-    },
-    {
-      "title": "Attendance System using Face Recognition",
-      "description": "Flask-based attendance system with multi-camera face recognition and role-based access.",
-      "tech": [
-        "python",
-        "flask",
-        "mysql",
-        "machine learning"
-      ],
-      "codeLink": "https://github.com/RaY8118/Flask_Face_Recognition--multiple_Cameras",
-      "thumbnail": "https://res.cloudinary.com/dkyzhoqpb/image/upload/w_600,q_auto,f_auto/v1747922220/portfolio/i6yqvhmemagvbmxkkuud.png"
-    },
-    {
-      "title": "Smart Home Control",
-      "description": "A PWA to control IoT devices via Firebase with real-time updates and user auth.",
-      "tech": [
-        "react",
-        "esp32",
-        "firebase",
-        "IoT",
-        "pwa-app"
-      ],
-      "codeLink": "https://github.com/RaY8118/SmartHomeControlV3",
-      "liveProj": "https://smart-home-control-v3.netlify.app",
-      "thumbnail": "https://res.cloudinary.com/dkyzhoqpb/image/upload/w_600,q_auto,f_auto/v1747921027/portfolio/wnwindgrxi1wcgulemub.png"
+      "codeLink": "https://github.com/ray8118/httpfromtcp",
+      "thumbnail":"https://res.cloudinary.com/dkyzhoqpb/image/upload/w_600,q_auto,f_auto/v1760076434/http_xzz3nh.png"
     }
   ]
 }

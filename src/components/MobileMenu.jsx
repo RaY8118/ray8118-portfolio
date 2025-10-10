@@ -21,31 +21,44 @@ export const MobileMenu = ({ menuOpen, SetMenuOpen }) => {
   ]
   return (
     <div
-      className={`fixed top-0 left-0 w-full bg-[rgba(10,10,10,0.8)] z-40 flex flex-col items-center justify-center transition-all duration-300 ease-in-out ${menuOpen ? "h-screen opacity-100 pointer-events-auto" : "h-0 opacity-0 pointer-event-none"}
-`}
+      className={`fixed top-0 left-0 w-full bg-gray-900/90 backdrop-blur-md z-40 flex flex-col items-center justify-center transition-all duration-300 ease-in-out ${menuOpen ? "h-screen opacity-100 pointer-events-auto" : "h-0 opacity-0 pointer-events-none"}`}
     >
       {menuOpen && (
         <button
           onClick={() => SetMenuOpen(false)}
-          className="absolute top-6 right-6 text-white text-3xl focus:outline-none cursor-pointer h-8 w-8"
+          className="absolute top-6 right-6 text-white hover:text-gray-300 focus:outline-none z-50 transition-colors duration-300"
           aria-label="Close Menu"
         >
-          {" "}
-          &times;
+          <svg
+            className="w-8 h-8"
+            fill="none"
+            stroke="currentColor"
+            viewBox="0 0 24 24"
+            xmlns="http://www.w3.org/2000/svg"
+          >
+            <path
+              strokeLinecap="round"
+              strokeLinejoin="round"
+              strokeWidth="2"
+              d="M6 18L18 6M6 6l12 12"
+            ></path>
+          </svg>
         </button>
       )}
-      {navBarTitles.map((option, key) => (
-        <React.Fragment key={key}>
+      <nav className="flex flex-col items-center">
+        {navBarTitles.map((option, key) => (
           <a
+            key={key}
             href={option.link}
             onClick={() => SetMenuOpen(false)}
-            className={`text-2xl font-semibold text-white my-4 transform transition-transform duration-300 
-                  ${menuOpen ? "opacity-100 translate-y-0" : "opacity-0 translate-y-5"}`}
+            className={`text-3xl font-bold text-white my-4 hover:text-gray-300 transition-colors duration-300 transform 
+                    ${menuOpen ? "opacity-100 translate-y-0" : "opacity-0 translate-y-5"}`}
+            style={{ transitionDelay: `${key * 50}ms` }}
           >
             {option.name}
           </a>
-        </ React.Fragment>
-      ))}
+        ))}
+      </nav>
     </div>
   );
 };
