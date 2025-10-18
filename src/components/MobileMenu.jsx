@@ -15,9 +15,13 @@ export const MobileMenu = ({ menuOpen, SetMenuOpen }) => {
       "link": "#projects"
     },
     {
+      "name": "Blogs",
+      "link": "#blog"
+    },
+    {
       "name": "Contact",
       "link": "#contact"
-    }
+    },
   ]
   return (
     <div

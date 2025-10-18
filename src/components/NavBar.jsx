@@ -15,9 +15,13 @@ export const NavBar = ({ menuOpen, SetMenuOpen }) => {
       "link": "#projects"
     },
     {
+      "name": "Blogs",
+      "link": "#blog"
+    },
+    {
       "name": "Contact",
       "link": "#contact"
-    }
+    },
   ]
   useEffect(() => {
     document.body.style.overflow = menuOpen ? "hidden" : "";

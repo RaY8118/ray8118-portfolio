@@ -1,6 +1,16 @@
 @import url('https://fonts.googleapis.com/css2?family=Comfortaa&display=swap');
 @import "tailwindcss";
 
+:root {
+  --background-color: #1a202c;
+  --text-color: #f7fafc;
+  --primary-color: #667eea;
+  --primary-dark-color: #5a67d8;
+  --card-background: #2d3748;
+  --secondary-color: #4299e1;
+  --text-color-light: #a0aec0;
+}
+
 html,
 body {
   margin: 0;
