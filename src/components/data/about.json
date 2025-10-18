@@ -31,20 +31,24 @@
   ],
   "backend": [
     {
-      "name": "Node.js",
-      "color": "#339933"
-    },
-    {
       "name": "Python",
       "color": "#3776AB"
+    },
+    {
+      "name": "FastAPI",
+      "color": "#009688"
     },
     {
       "name": "Flask",
       "color": "#000000"
     },
     {
-      "name": "FastAPI",
-      "color": "#009688"
+      "name": "Golang",
+      "color": "#0db7ed"
+    },
+    {
+      "name": "Node.js",
+      "color": "#339933"
     },
     {
       "name": "Express",
