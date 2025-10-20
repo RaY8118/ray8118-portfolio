@@ -27,10 +27,10 @@ export const NavBar = ({ menuOpen, SetMenuOpen }) => {
     document.body.style.overflow = menuOpen ? "hidden" : "";
   }, [menuOpen]);
   return (
-    <nav className="fixed top-0 w-full z-40 bg-gray-900/80 backdrop-blur-md border-b border-gray-700 shadow-lg">
+    <nav className="fixed top-0 w-full z-40 bg-teal-900/80 backdrop-blur-md border-b border-teal-700 shadow-lg">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex justify-between items-center h-16">
-          <a href="#home" className="font-mono text-2xl font-extrabold text-white hover:text-gray-200 transition-colors duration-300">
+          <a href="#home" className="font-mono text-2xl font-extrabold text-white hover:text-teal-200 transition-colors duration-300">
             {" "}
             RaY8118{" "}
           </a>
@@ -62,7 +62,7 @@ export const NavBar = ({ menuOpen, SetMenuOpen }) => {
                 <React.Fragment key={key}>
                   <a
                     href={option.link}
-                    className="text-gray-300 hover:text-white px-3 py-2 rounded-md text-sm font-medium transition-colors duration-300"
+                    className="text-teal-200 hover:text-white px-3 py-2 rounded-md text-md font-medium transition-colors duration-300"
                   >
                     {option.name}
                   </a>

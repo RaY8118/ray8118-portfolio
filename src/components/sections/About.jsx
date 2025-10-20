@@ -9,11 +9,11 @@ export const About = () => {
     >
       <RevealOnScroll>
         <div className="max-w-6xl mx-auto px-4">
-          <h2 className="text-4xl font-extrabold mb-12 text-center bg-gradient-to-r from-purple-400 to-blue-600 bg-clip-text text-transparent">
+          <h2 className="text-4xl md:text-5xl font-extrabold mb-12 text-center bg-gradient-to-r from-teal-300 via-cyan-200 to-white  bg-clip-text text-transparent">
             About Me
           </h2>
 
-          <div className="bg-gray-800/50 rounded-xl p-8 border border-gray-700 shadow-xl hover:shadow-purple-500/20 transition-all duration-300 transform hover:-translate-y-1">
+          <div className="glass-card rounded-xl p-8 border border-gray-700 shadow-xl hover:shadow-teal-500/20 transition-all duration-300 transform hover:-translate-y-1">
             <p className="text-gray-300 text-lg leading-relaxed mb-6">
               👨‍💻 I'm a passionate Full-Stack Developer with a significant focus on crafting robust and scalable backend systems 🔧. My journey in software development is driven by a desire to build efficient solutions, from intricate API designs to powerful data processing pipelines. I recently completed my B.Tech and am continuously expanding my expertise through hands-on projects and exploring cutting-edge technologies.
             </p>
@@ -30,15 +30,15 @@ export const About = () => {
               ⚡ <strong>Fun Fact:</strong> My coding environment is a highly customized Neovim setup, often themed with anime aesthetics – a unique blend that fuels my productivity and creativity 😎.
             </p>
             <div className="grid grid-cols-1 md:grid-cols-3 gap-8 mt-10">
-              <div className="bg-gray-800/50 rounded-xl p-6 border border-gray-700 shadow-md hover:shadow-purple-500/20 transition-all duration-300 transform hover:-translate-y-1">
-                <h3 className="text-2xl font-bold mb-5 text-purple-300">Frontend</h3>
+              <div className="inner-glass-card rounded-xl p-6 border border-gray-700 shadow-md hover:shadow-teal-500/20 transition-all duration-300 transform hover:-translate-y-1">
+                <h3 className="text-2xl font-bold mb-5 text-teal-300">Frontend</h3>
                 <div className="flex flex-wrap gap-3">
                   {aboutData.frontend.map((tech, key) => (
                     <span
                       key={key}
                       style={{
                         backgroundColor: tech.color || "#4A5568", // Default gray if no color
-                        color: tech.color && (tech.color === "#F7DF1E" || tech.color === "#61DAFB") ? "#1A202C" : "#FFFFFF", // Darker text for light backgrounds
+                        color: tech.color && (tech.color === "#F7DF1E" || tech.color === "#61DAFB") ? "#1A202C" : "#FFFFFF",
                       }}
                       className="py-1.5 px-4 rounded-full text-sm font-medium transition-all hover:scale-105"
                     >
@@ -48,8 +48,8 @@ export const About = () => {
                 </div>
               </div>
 
-              <div className="bg-gray-800/50 rounded-xl p-6 border border-purple-600 shadow-lg hover:shadow-purple-500/40 transition-all duration-300 transform hover:-translate-y-1">
-                <h3 className="text-2xl font-bold mb-5 text-purple-400">Backend</h3>
+              <div className="inner-glass-card rounded-xl p-6 border border-teal-600 shadow-lg hover:shadow-teal-500/40 transition-all duration-300 transform hover:-translate-y-1">
+                <h3 className="text-2xl font-bold mb-5 text-teal-400">Backend</h3>
                 <div className="flex flex-wrap gap-3">
                   {aboutData.backend.map((tech, key) => (
                     <span
@@ -66,8 +66,8 @@ export const About = () => {
                 </div>
               </div>
 
-              <div className="bg-gray-800/50 rounded-xl p-6 border border-gray-700 shadow-md hover:shadow-purple-500/20 transition-all duration-300 transform hover:-translate-y-1">
-                <h3 className="text-2xl font-bold mb-5 text-purple-300">Database</h3>
+              <div className="inner-glass-card rounded-xl p-6 border border-gray-700 shadow-md hover:shadow-teal-500/20 transition-all duration-300 transform hover:-translate-y-1">
+                <h3 className="text-2xl font-bold mb-5 text-teal-300">Database</h3>
                 <div className="flex flex-wrap gap-3">
                   {aboutData.database.map((tech, key) => (
                     <span
@@ -87,8 +87,8 @@ export const About = () => {
           </div>
 
           <div className="grid grid-cols-1 md:grid-cols-2 gap-8 mt-10">
-            <div className="bg-gray-800/50 p-6 rounded-xl border border-gray-700 shadow-md hover:shadow-purple-500/20 transition-all duration-300 transform hover:-translate-y-1">
-              <h3 className="text-2xl font-bold mb-5 text-purple-300">Education</h3>
+            <div className="glass-card p-6 rounded-xl border border-gray-700 shadow-md hover:shadow-teal-500/20 transition-all duration-300 transform hover:-translate-y-1">
+              <h3 className="text-2xl font-bold mb-5 text-teal-300">Education</h3>
               <ul className="list-disc list-inside text-gray-300 space-y-3">
                 <li>
                   <strong>B.Tech in Electronics and Computer Science</strong> – SAKEC (2021–2025)
@@ -102,8 +102,8 @@ export const About = () => {
               </ul>
             </div>
 
-            <div className="bg-gray-800/50 p-6 rounded-xl border border-gray-700 shadow-md hover:shadow-purple-500/20 transition-all duration-300 transform hover:-translate-y-1">
-              <h3 className="text-2xl font-bold mb-5 text-purple-300">Internships</h3>
+            <div className="glass-card p-6 rounded-xl border border-gray-700 shadow-md hover:shadow-teal-500/20 transition-all duration-300 transform hover:-translate-y-1">
+              <h3 className="text-2xl font-bold mb-5 text-teal-300">Internships</h3>
               <div className="space-y-5 text-gray-300">
                 <div>
                   <h4 className="font-semibold text-lg">Python Developer Intern – Oasis Infobyte</h4>

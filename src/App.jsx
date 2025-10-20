@@ -6,7 +6,7 @@ import { MobileMenu } from "./components/MobileMenu";
 import { Home } from "./components/sections/Home";
 import { About } from "./components/sections/About";
 import { Projects } from "./components/sections/Projects";
-import BlogSection from "./components/sections/BlogSection";
+import { Blog } from "./components/sections/Blog";
 import { Contact } from "./components/sections/Contact";
 import { useState } from "react";
 import { ToastContainer } from "react-toastify"
@@ -25,7 +25,7 @@ function App() {
         <Home />
         <About />
         <Projects />
-        <BlogSection />
+        <Blog />
         <Contact />
         <ToastContainer position="top-center" />
       </div>

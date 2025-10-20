@@ -25,12 +25,12 @@ export const MobileMenu = ({ menuOpen, SetMenuOpen }) => {
   ]
   return (
     <div
-      className={`fixed top-0 left-0 w-full bg-gray-900/90 backdrop-blur-md z-40 flex flex-col items-center justify-center transition-all duration-300 ease-in-out ${menuOpen ? "h-screen opacity-100 pointer-events-auto" : "h-0 opacity-0 pointer-events-none"}`}
+      className={`fixed top-0 left-0 w-full bg-teal-900/90 backdrop-blur-md z-40 flex flex-col items-center justify-center transition-all duration-300 ease-in-out ${menuOpen ? "h-screen opacity-100 pointer-events-auto" : "h-0 opacity-0 pointer-events-none"}`}
     >
       {menuOpen && (
         <button
           onClick={() => SetMenuOpen(false)}
-          className="absolute top-6 right-6 text-white hover:text-gray-300 focus:outline-none z-50 transition-colors duration-300"
+          className="absolute top-6 right-6 text-white hover:text-teal-300 focus:outline-none z-50 transition-colors duration-300"
           aria-label="Close Menu"
         >
           <svg
@@ -55,7 +55,7 @@ export const MobileMenu = ({ menuOpen, SetMenuOpen }) => {
             key={key}
             href={option.link}
             onClick={() => SetMenuOpen(false)}
-            className={`text-3xl font-bold text-white my-4 hover:text-gray-300 transition-colors duration-300 transform 
+            className={`text-3xl font-bold text-white my-4 hover:text-teal-200 transition-colors duration-300 transform 
                     ${menuOpen ? "opacity-100 translate-y-0" : "opacity-0 translate-y-5"}`}
             style={{ transitionDelay: `${key * 50}ms` }}
           >

@@ -32,7 +32,7 @@ export const Contact = () => {
     >
       <RevealOnScroll>
         <div className="w-full max-w-xl">
-          <h2 className="text-4xl font-extrabold mb-8 text-center bg-gradient-to-r from-purple-400 to-blue-600 bg-clip-text text-transparent">
+          <h2 className="text-4xl md:text-5xl font-extrabold mb-8 text-center bg-gradient-to-r from-teal-300 via-cyan-200 to-white bg-clip-text text-transparent">
             Connect With Me
           </h2>
           <div className="flex justify-center space-x-6 mb-12">
@@ -66,7 +66,7 @@ export const Contact = () => {
               <svg width="48px" height="48px" viewBox="0 0 48 48" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlnsXlink="http://www.w3.org/1999/xlink"><g fillRule="evenodd"><path d="M3.298 16.037c-4.398 4.398 -4.398 11.527 0 15.925l12.739 12.739c4.398 4.397 11.527 4.397 15.925 0l12.739 -12.739c4.397 -4.398 4.397 -11.527 0 -15.925L31.962 3.298c-4.398 -4.397 -11.527 -4.397 -15.925 0zm26.275 13.536c3.078 -3.079 3.078 -8.069 0 -11.147 -3.078 -3.079 -8.069 -3.079 -11.147 0 -3.079 3.078 -3.079 8.069 0 11.147 3.078 3.078 8.069 3.078 11.147 0z" fill="#2962FF" /></g></svg>
             </a>
           </div>
-          <h2 className="text-4xl font-extrabold mb-8 text-center bg-gradient-to-r from-purple-400 to-blue-600 bg-clip-text text-transparent">
+          <h2 className="text-4xl font-extrabold mb-8 text-center bg-gradient-to-r  from-teal-300 via-cyan-200 to-white bg-clip-text text-transparent">
             Send Me a Message
           </h2>
           <form
@@ -80,7 +80,7 @@ export const Contact = () => {
                 name="name"
                 required
                 value={formData.name}
-                className="w-full bg-gray-800 border border-gray-700 rounded-md px-4 py-3 text-gray-100 placeholder-gray-500 transition-all duration-300 focus:outline-none focus:border-purple-500 focus:ring-1 focus:ring-purple-500"
+                className="w-full bg-gray-800 border border-gray-700 rounded-md px-4 py-3 text-gray-100 placeholder-gray-500 transition-all duration-300 focus:outline-none focus:border-teal-500 focus:ring-1 focus:ring-teal-500"
                 placeholder="Your Name"
                 onChange={(e) =>
                   setFormData({ ...formData, name: e.target.value })
@@ -93,7 +93,7 @@ export const Contact = () => {
                 name="email"
                 required
                 value={formData.email}
-                className="w-full bg-gray-800 border border-gray-700 rounded-md px-4 py-3 text-gray-100 placeholder-gray-500 transition-all duration-300 focus:outline-none focus:border-purple-500 focus:ring-1 focus:ring-purple-500"
+                className="w-full bg-gray-800 border border-gray-700 rounded-md px-4 py-3 text-gray-100 placeholder-gray-500 transition-all duration-300 focus:outline-none focus:border-teal-500 focus:ring-1 focus:ring-teal-500"
                 placeholder="Your Email"
                 onChange={(e) =>
                   setFormData({ ...formData, email: e.target.value })
@@ -106,7 +106,7 @@ export const Contact = () => {
                 required
                 value={formData.message}
                 rows={6}
-                className="w-full bg-gray-800 border border-gray-700 rounded-md px-4 py-3 text-gray-100 placeholder-gray-500 transition-all duration-300 focus:outline-none focus:border-purple-500 focus:ring-1 focus:ring-purple-500"
+                className="w-full bg-gray-800 border border-gray-700 rounded-md px-4 py-3 text-gray-100 placeholder-gray-500 transition-all duration-300 focus:outline-none focus:border-teal-500 focus:ring-1 focus:ring-teal-500"
                 placeholder="Your Message"
                 onChange={(e) =>
                   setFormData({ ...formData, message: e.target.value })
@@ -114,7 +114,7 @@ export const Contact = () => {
               />
               <button
                 type="submit"
-                className="w-full bg-purple-600 text-white py-3 px-6 rounded-full font-semibold shadow-lg hover:bg-purple-700 transition-all duration-300 transform hover:-translate-y-1"
+                className="w-full bg-teal-600 text-white py-3 px-6 rounded-full font-semibold shadow-lg hover:bg-teal-700 transition-all duration-300 transform hover:-translate-y-2"
               >
                 Send Message
               </button>
