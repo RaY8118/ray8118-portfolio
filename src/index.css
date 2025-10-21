@@ -1,23 +1,23 @@
-@import url('https://fonts.googleapis.com/css2?family=Caveat:wght@400..700&family=Comfortaa:wght@300..700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Caveat:wght@400..700&family=Comfortaa:wght@300..700&family=Space+Grotesk:wght@300..700&display=swap');
 @import "tailwindcss";
 
 :root {
-  --background-color: #1a202c;
-  --text-color: #f7fafc;
-  --primary-color: #667eea;
-  --primary-dark-color: #5a67d8;
-  --card-background: #2d3748;
-  --secondary-color: #4299e1;
-  --text-color-light: #a0aec0;
+  --font-primary: 'Space Grotesk', sans-serif;
+  --font-mono: 'IBM Plex Mono', monospace;
+}
+
+code, pre {
+  font-family: var(--font-mono);
 }
 
 html,
 body {
   margin: 0;
   padding: 0;
-  font-family: "Comfortaa", sans-serif;
-  background: linear-gradient(135deg, #0f2027 0%, #203a43 50%, #2c5364 100%);
+  font-family: var(--font-primary);
+  background: radial-gradient(circle at 20% 20%, #08121f, #090c1a 30%, #0a0e1a 70%);
   background-attachment: fixed;
+  overflow-x: hidden;
   background-size: cover;
   background-repeat: no-repeat;
   color: #f3f4f6;
@@ -51,8 +51,38 @@ body {
     }
   }
 
+@keyframes cmd-fade {
+  0%, 100% { opacity: 0.4; transform: translateY(0); }
+  50% { opacity: 0.8; transform: translateY(-1px); }
+}
+
+.animate-cmd-fade {
+  animation: cmd-fade 5s ease-in-out infinite;
+}
+
+@keyframes blink {
+  50% { opacity: 0; }
+}
+
+.animate-blink {
+  animation: blink 1s step-end infinite;
+}
+
+.animate-cmd-fade {
+  animation: cmd-fade 5s ease-in-out infinite;
+}
   .animate-blink {
     animation: blink 0.8s step-end infinite;
+  }
+
+  @keyframes pulse-dots {
+    0% { opacity: 0.7; }
+    50% { opacity: 1; }
+    100% { opacity: 0.7; }
+  }
+
+  .animate-pulse-dots {
+    animation: pulse-dots 2s infinite alternate ease-in-out;
   }
 }
 
@@ -61,49 +91,52 @@ body::before {
   content: "";
   position: fixed;
   inset: 0;
-  background: radial-gradient(circle at 20% 20%, rgba(123, 31, 162, 0.25), transparent 40%),
-              radial-gradient(circle at 80% 80%, rgba(0, 188, 212, 0.25), transparent 40%);
+  background: radial-gradient(circle at 80% 20%, rgba(0, 255, 255, 0.05), transparent 60%),
+              radial-gradient(circle at 20% 80%, rgba(0, 255, 180, 0.05), transparent 60%);
   z-index: -1;
+  animation: pulse 8s infinite alternate ease-in-out;
+}
+
+@keyframes pulse {
+  from { opacity: 0.4; }
+  to { opacity: 0.8; }
 }
 
 .glass-card {
-  background: linear-gradient(
-    135deg,
-    rgba(255, 255, 255, 0.25),
-    rgba(255, 255, 255, 0.05)
-  );
-  backdrop-filter: blur(25px);
-  -webkit-backdrop-filter: blur(25px);
-  border: 1px solid rgba(255, 255, 255, 0.3);
-  border-radius: 12px;
-  box-shadow: 0 4px 40px rgba(0, 0, 0, 0.4);
-  color: #fff;
+  background: linear-gradient(135deg, rgba(255,255,255,0.15), rgba(255,255,255,0.05));
+  border: 1px solid rgba(0, 255, 255, 0.2);
+  backdrop-filter: blur(20px);
+  box-shadow: 0 0 25px rgba(0, 255, 255, 0.05);
+  transition: all 0.4s ease;
   position: relative;
+  overflow: hidden;
 }
 
-.glass-card:hover {
-  background: linear-gradient(
-    135deg,
-    rgba(255, 255, 255, 0.35),
-    rgba(255, 255, 255, 0.12)
-  );
-  border: 1px solid rgba(255, 255, 255, 0.4);
-  box-shadow: 0 12px 50px rgba(0, 0, 0, 0.5);
-  transition: all 0.3s ease;
-  transform: translateY(-4px);
+.glass-card::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(90deg, rgba(0,255,255,0.1), transparent, rgba(0,255,255,0.05));
+  transform: translateX(-100%);
+  transition: transform 0.8s ease;
+}
+
+.glass-card:hover::before {
+  transform: translateX(100%);
 }
 
 .inner-glass-card {
   background: linear-gradient(
     135deg,
-    rgba(255, 255, 255, 0.18),
-    rgba(255, 255, 255, 0.04)
+    rgba(255, 255, 255, 0.22),
+    rgba(255, 255, 255, 0.06)
   );
-  backdrop-filter: blur(20px);
-  -webkit-backdrop-filter: blur(20px);
-  border: 1px solid rgba(255, 255, 255, 0.2);
-  border-radius: 10px;
-  box-shadow: 0 2px 25px rgba(0, 0, 0, 0.25);
+  backdrop-filter: blur(15px);
+  -webkit-backdrop-filter: blur(15px);
+  border: 1px solid rgba(255, 255, 255, 0.25);
+  border-radius: 12px;
+  box-shadow: 0 2px 25px rgba(0, 255, 255, 0.1),
+              inset 0 0 10px rgba(255, 255, 255, 0.05);
   transition: all 0.3s ease;
   position: relative;
 }
@@ -111,12 +144,13 @@ body::before {
 .inner-glass-card:hover {
   background: linear-gradient(
     135deg,
-    rgba(255, 255, 255, 0.3),
-    rgba(255, 255, 255, 0.1)
+    rgba(255, 255, 255, 0.35),
+    rgba(255, 255, 255, 0.15)
   );
-  border-color: rgba(255, 255, 255, 0.3);
-  box-shadow: 0 4px 30px rgba(0, 0, 0, 0.4);
-  transform: translateY(-4px);
+  border-color: rgba(0, 255, 255, 0.4);
+  box-shadow: 0 4px 30px rgba(0, 255, 255, 0.15),
+              inset 0 0 12px rgba(255, 255, 255, 0.1);
+  transform: translateY(-5px) scale(1.02);
 }
 
 .reveal {

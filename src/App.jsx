@@ -10,16 +10,17 @@ import { Blog } from "./components/sections/Blog";
 import { Contact } from "./components/sections/Contact";
 import { useState } from "react";
 import { ToastContainer } from "react-toastify"
+import { GlobalBackground } from "./components/GlobalBackground";
 function App() {
   const [isLoaded, setIsLoaded] = useState(false);
   const [menuOpen, SetMenuOpen] = useState(false);
   return (
     <>
       {!isLoaded && <LoadingScreen onComplete={() => setIsLoaded(true)} />}
+      <GlobalBackground />
       <div
-        className={`min-h-screen transition-opacity duration-700 ${isLoaded ? "opacity-100" : "opacity-0"}  text-text-light font-comfortaa glass-effect`}
+        className={`min-h-screen transition-opacity duration-700 ${isLoaded ? "opacity-100" : "opacity-0"}`}
       >
-
         <NavBar menuOpen={menuOpen} SetMenuOpen={SetMenuOpen} />
         <MobileMenu menuOpen={menuOpen} SetMenuOpen={SetMenuOpen} />
         <Home />
