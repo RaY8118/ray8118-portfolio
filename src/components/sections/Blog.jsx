@@ -14,12 +14,12 @@ export const Blog = () => {
           <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
             {posts.map(post => (
               <article key={post.id} className="glass-card p-6 rounded-xl border border-gray-700 shadow-lg hover:shadow-teal-500/20 transition-all duration-300 transform hover:-translate-y-2 flex flex-col">
-                {post.coverImage && post.coverImage.url && (
-                  <img src={post.coverImage.url} alt={post.title} className="w-full h-48 object-cover rounded-t-xl mb-4 hover:scale-105 transition-transform duration-300" />
+                {post.coverImage && (
+                  <img src={post.coverImage} alt={post.title} loading="lazy" className="w-full h-48 object-cover rounded-t-xl mb-4 hover:scale-105 transition-transform duration-300" />
                 )}
                 <h3 className="text-2xl font-bold mb-2 text-white"><a href={post.url} target="_blank" rel="noopener noreferrer" className="hover:text-teal-400 transition-colors duration-300">{post.title}</a></h3>
                 <p className="text-gray-400 mb-4 text-base flex-grow">{post.brief}</p>
-                <a href={post.url} target="_blank" rel="noopener noreferrer" className="mt-auto px-4 py-2 bg-teal-600 hover:bg-teal-700 text-white text-sm rounded-full transition-colors duration-200 self-start">
+                <a href={post.url} alt={post.title} target="_blank" rel="noopener noreferrer" className="mt-auto px-4 py-2 bg-teal-600 hover:bg-teal-700 text-white text-sm rounded-full transition-colors duration-200 self-start">
                   Read More
                 </a>
               </article>

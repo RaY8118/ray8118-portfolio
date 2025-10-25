@@ -1,10 +1,13 @@
-import fs from 'fs';
-import path from 'path';
-import { fileURLToPath } from 'url';
-import { dirname } from 'path';
+import fs from "fs";
+import path from "path";
+import { fileURLToPath } from "url";
+import { dirname } from "path";
 
 const __filename = fileURLToPath(import.meta.url);
 const __dirname = dirname(__filename);
+const CLOUDINARY_CLOUD_NAME = "dkyzhoqpb";
+
+const cloudinaryPrefix = `https://res.cloudinary.com/${CLOUDINARY_CLOUD_NAME}/image/fetch/f_auto,f_webp,q_auto:eco,w_800/`;
 
 const query = `
   query PublicationPosts {
@@ -32,12 +35,10 @@ const query = `
 
 async function fetchBlogs() {
   try {
-    const response = await fetch('https://gql.hashnode.com', {
-      method: 'POST',
-      headers: {
-        'Content-Type': 'application/json',
-      },
-      body: JSON.stringify({ query, operationName: "PublicationPosts" })
+    const response = await fetch("https://gql.hashnode.com", {
+      method: "POST",
+      headers: { "Content-Type": "application/json" },
+      body: JSON.stringify({ query, operationName: "PublicationPosts" }),
     });
 
     if (!response.ok) {
@@ -47,16 +48,34 @@ async function fetchBlogs() {
     const data = await response.json();
 
     if (data.errors) {
-      throw new Error(data.errors.map(err => err.message).join(', '));
+      throw new Error(data.errors.map((err) => err.message).join(", "));
     }
 
-    const posts = data.data.publication.posts.edges.map(edge => edge.node);
-    const outputPath = path.join(__dirname, '../src/components/data/blogs.json');
+    const posts = data.data.publication.posts.edges.map(({ node }) => {
+      const originalImage =
+        node.coverImage?.url || node.ogMetaData?.image || "";
 
-    fs.writeFileSync(outputPath, JSON.stringify(posts, null, 2), 'utf-8');
-    console.log('Blogs fetched and saved to src/components/data/blogs.json');
+      const optimizedImage = originalImage
+        ? `${cloudinaryPrefix}${encodeURIComponent(originalImage)}`
+        : null;
+
+      return {
+        ...node,
+        coverImage: optimizedImage,
+      };
+    });
+
+    const outputPath = path.join(
+      __dirname,
+      "../src/components/data/blogs.json",
+    );
+    fs.writeFileSync(outputPath, JSON.stringify(posts, null, 2), "utf-8");
+
+    console.log(
+      "✅ Blogs fetched, optimized, and saved to src/components/data/blogs.json",
+    );
   } catch (error) {
-    console.error('Error fetching or saving blogs:', error);
+    console.error("❌ Error fetching or saving blogs:", error);
     process.exit(1);
   }
 }
